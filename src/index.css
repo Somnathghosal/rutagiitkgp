@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink-50: #f7f6f3;
+  --ink-100: #efede8;
+  --ink-200: #e2e0da;
+  --ink-900: #1a1a18;
+  --accent-500: #335f89;
+  --accent-600: #234b6e;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    background-color: var(--ink-50);
+    color: var(--ink-900);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(35, 75, 110, 0.16);
+    color: var(--ink-900);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  /* Faint topographic contour texture used across sections */
+  .bg-topo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Cg fill='none' stroke='%231a1a18' stroke-width='1'%3E%3Cpath opacity='0.035' d='M0 560c100-30 200-30 320-60s220-90 320-70'/%3E%3Cpath opacity='0.03' d='M0 480c120-40 240-30 320-70s200-110 320-80'/%3E%3Cpath opacity='0.03' d='M0 400c140-50 260-30 320-80s180-130 320-90'/%3E%3Cpath opacity='0.025' d='M0 320c160-60 280-30 320-90s160-150 320-100'/%3E%3Cpath opacity='0.025' d='M0 240c180-70 300-30 320-100s140-170 320-110'/%3E%3Cpath opacity='0.02' d='M0 160c200-80 320-30 320-110s120-190 320-120'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 640px 640px;
+  }
+
+  /* Faint engineering grid */
+  .bg-grid {
+    background-image: linear-gradient(rgba(26, 26, 24, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 26, 24, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* Subtle film-grain noise for depth */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  }
+
+  /* Mask helper to fade edges */
+  .mask-fade-y {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  }
+
+  /* Display tracking for large serif headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Lenis smooth scroll required styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
