@@ -92,7 +92,10 @@ export default function Footer() {
 
             <ul className="mt-5 space-y-3 text-[14px] text-ink-600">
               <li>
-                Centre for Rural Development and Technology, IIT Kharagpur
+                Coordinator – RuTAG IIT Kharagpur
+              </li>
+              <li>
+                Rural Development Centre, IIT Kharagpur
               </li>
 
               <li>West Bengal, India - 721302</li>

@@ -262,7 +262,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-full left-0 w-full bg-white border-t border-ink-200 shadow-xl md:hidden"
+                className="absolute top-full left-0 z-50 w-full bg-white border-t border-ink-200 shadow-xl lg:hidden"
               >
                 <div className="px-6 py-6">
                   {/* Home */}

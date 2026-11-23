@@ -546,7 +546,7 @@ export default function ProductsPage() {
     <>
       <PageHeader
         eyebrow="Products"
-        title="Machines built for rural resilience."
+        title="Machines built for rural resilience"
         subtitle="A catalogue of machines and technologies developed at RuTAG — each one engineered for durability, affordability, and local maintainability. Click any machine to view its brochure."
       />
 
