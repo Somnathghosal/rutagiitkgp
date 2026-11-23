@@ -9,11 +9,13 @@ import {
 } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import PageHeader from '../components/PageHeader';
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).toString();
+// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+//   'pdfjs-dist/build/pdf.worker.min.mjs',
+//   import.meta.url
+// ).toString();
 
+import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?worker&url';
+pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
 
 
 
