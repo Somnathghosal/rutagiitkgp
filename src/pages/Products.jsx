@@ -18,6 +18,8 @@ import PageHeader from '../components/PageHeader';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?worker&url';
 pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
 
+import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?worker&url';
+pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
 
 
 
@@ -550,7 +552,7 @@ export default function ProductsPage() {
     <>
       <PageHeader
         eyebrow="Products"
-        title="Machines built for rural resilience."
+        title="Machines built for rural resilience"
         subtitle="A catalogue of machines and technologies developed at RuTAG — each one engineered for durability, affordability, and local maintainability. Click any machine to view its brochure."
       />
 

@@ -76,7 +76,7 @@ export default function Contact() {
                     />
 
                     <p className="text-[15px] leading-6 text-ink-700">
-                      Centre for Rural Development and Technology, IIT Kharagpur
+                      Coordinator - RuTAG IIT Kharagpur, Rural Development Centre, IIT Kharagpur
                       <br />
                       West Bengal, India - 721302
                     </p>
@@ -324,19 +324,19 @@ export default function Contact() {
                 </p>
 
                 <div className="mt-4">
-                  <p className="text-[15px] font-medium text-ink-900">
+                  {/* <p className="text-[15px] font-medium text-ink-900">
                     Dr. Somnath Ghosal
-                  </p>
+                  </p> */}
 
                   <p className="mt-1 text-[13px] leading-5 text-ink-600">
-                    Professor
+                    
                     <br />
-                    Coordinator – RuTAG, IIT Kharagpur
+                    Coordinator – RuTAG IIT Kharagpur
                   </p>
                 </div>
 
                 <p className="mt-4 text-[14px] leading-6 text-ink-700">
-                  Centre for Rural Development and Technology,
+                  Rural Development Centre,
                   <br />
                   IIT Kharagpur, West Bengal
                   <br />
