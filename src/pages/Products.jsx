@@ -18,8 +18,8 @@ import PageHeader from '../components/PageHeader';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?worker&url';
 pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
 
-import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?worker&url';
-pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
+// import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?worker&url';
+// pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
 
 
 
